@@ -3,13 +3,14 @@ Layout du pied de page
 */
 
 footer{
- background-color: rgb(201, 161, 32);
+ background-color: rgb(167, 178, 212);
  color: black;
 }
 
 .piedpage{
  display: flex;
  flex-direction: column;
+ justify-content: space-between;
  &__s1{
     display: flex;
     flex-wrap: wrap;

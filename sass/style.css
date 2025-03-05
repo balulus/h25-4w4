@@ -28,7 +28,6 @@ body {
 
 h1 {
   font-size: clamp(2rem, 3vw, 5rem);
-  text-shadow: 2px 2px 5px white;
 }
 
 h2 {
@@ -91,6 +90,10 @@ Les composants
 .recherche__input:hover {
   background-color: rgba(0, 0, 0, 0.05);
 }
+.recherche__input::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.2);
+  font-style: italic;
+}
 .recherche__input::placeholder {
   color: rgba(0, 0, 0, 0.2);
   font-style: italic;
@@ -109,7 +112,7 @@ Les composants
   flex: 1 1 250px;
 }
 .carte__image img {
-  width: 1700px;
+  width: 100%;
 }
 .carte__contenu {
   background-color: aliceblue;
@@ -120,15 +123,14 @@ Les layouts
 .global {
   max-width: 1100px;
   padding: 10vh 5vw;
-  justify-content: space-around;
-  align-items: center;
 }
 
 .populaire .global {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  border: 10%;
 }
 
 .entete {
@@ -156,23 +158,30 @@ Les layouts
   }
 }
 
+.galerie {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .hero {
   background-image: url("images/maldive.jpg");
   background-repeat: no-repeat;
-  width: 100%;
+  min-height: 100vh;
 }
 
 /*
-  --------------------------------- Layout du pied de page
+Layout du pied de page
 */
 footer {
-  background-color: rgb(189, 190, 255);
-  color: #000;
+  background-color: rgb(167, 178, 212);
+  color: black;
 }
 
 .piedpage {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 .piedpage__s1 {
   display: flex;
@@ -182,13 +191,9 @@ footer {
 .piedpage__s1__externe {
   flex: 0 0 20%;
 }
-.piedpage__s1__externe .menu {
-  display: flex;
-  flex-direction: column;
-}
 .piedpage__s1__adresse {
-  flex: 0 0 40%;
+  flex: 0 0 20%;
 }
 .piedpage__s1__description {
-  flex: 1 0 400px;
+  flex: 1;
 }/*# sourceMappingURL=style.css.map */
