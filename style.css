@@ -132,6 +132,15 @@ Les composants
  display: grid;
  place-content: center;
 }
+.carte__category{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.carte_liste{
+  display: flex;
+  justify-content: space-around;
+}
 /* /////////////////////////////////
 Les layouts
 //////////////////////////////////// */
@@ -140,6 +149,8 @@ Les layouts
   padding: 10vh 5vw;
   justify-content: space-around;
   align-items: center;
+  margin-left: auto;
+      margin-right: auto;
 }
 
 .populaire .global {
@@ -161,6 +172,7 @@ Les layouts
   background-color: transparent;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 @media screen and (max-width: 800px) {
   .entete__navigation {

@@ -27,13 +27,16 @@ $hero_background = get_theme_mod('hero_background', '');
 
     <section class="populaire">
         <div class="global">
+            <div class="centrage">
             <?php if (have_posts()) : while (have_posts()) : the_post(); 
             if (in_category("galerie"))  {
                 the_content() ;
-            } else {    ?>
+            }
+             else {    ?><div class="carte_liste">
                 <?php get_template_part( 'gabarits/carte' ); ?>
-            <?php } ?>
+            <?php } ?></div>
             <?php endwhile; endif; ?>
+        </div>
         </div>
     </section>
     <footer></footer>
