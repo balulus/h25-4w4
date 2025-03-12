@@ -139,6 +139,7 @@ Les composants
 }
 .carte_liste{
   display: flex;
+    width: 45%;
   justify-content: space-around;
 }
 /* /////////////////////////////////
@@ -190,10 +191,9 @@ Les layouts
   background-image: url("images/maldive.jpg");
   background-repeat: no-repeat;
   width: 100vw;
+    text-align: center;
 }
-.hero__description && .hero__courriel && .hero__adresse{
-  color: #555555;
-}
+
 /*
   --------------------------------- Layout du pied de page
 */
