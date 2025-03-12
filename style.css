@@ -160,7 +160,9 @@ Les layouts
   justify-content: space-around;
   align-items: center;
 }
-
+header{
+  background-color: black;
+}
 .entete {
   display: flex;
   justify-content: space-between;
