@@ -109,7 +109,8 @@ Les composants
   flex: 1 1 250px;
 }
 .carte__image img {
-  width: 1700px;
+  width: 150%;
+  height: 100%;
 }
 .carte__contenu {
   background-color: aliceblue;
@@ -159,7 +160,7 @@ Les layouts
 .hero {
   background-image: url("images/maldive.jpg");
   background-repeat: no-repeat;
-  width: 100%;
+  width: 200%;
 }
 
 /*
