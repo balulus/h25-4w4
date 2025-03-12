@@ -9,10 +9,10 @@
                 the_post_thumbnail('large'); }
             ?>  
                 <div><?php the_content() ?>
-                <?php the_category(); ?>
                 <p>Température maximum: <?php the_field('temperature_maximum') ?>&#176;C</p>
                 <p>Température minimum: <?php the_field('temperature_minimum') ?>&#176;C</p>
                 <p>Température moyenne: <?php the_field('temperature_moyenne') ?>&#176;C</p>
+                <?php the_category(); ?>
             <?php endwhile; endif; ?>
         </div>
     </section>
