@@ -284,10 +284,18 @@ footer {
   background-size: cover;
   background-position: center;
 }
+
 .error-404 .container {
   color: white;
   max-width: 800px;
   margin: 0 auto;
+}
+
+.content-wrapper {
+  background-color: rgba(255, 255, 255, 0.374); 
+  padding: 20px;
+  border-radius: 8px; 
+  margin-bottom: 30px; 
 }
 
 .error-404 h1 {
@@ -295,6 +303,10 @@ footer {
   margin-bottom: 20px;
 }
 
+.error-404 p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
 .error-404 .btn-return-home {
   display: inline-block;
   padding: 10px 20px;
@@ -307,16 +319,13 @@ footer {
 .related-posts {
   margin-top: 50px;
 }
-
 .related-posts ul {
   list-style-type: none;
   padding: 0;
 }
-
 .related-posts ul li {
   margin: 10px 0;
 }
-
 .related-posts ul li a {
   color: #332c56;
   text-decoration: none;

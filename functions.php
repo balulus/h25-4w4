@@ -104,9 +104,9 @@ function my_customizer_settings($wp_customize) {
         'settings' => 'background_image_404',
     )));
 
-    // Paramètre pour le texte d'erreur
+    // Les textes
     $wp_customize->add_setting('custom_error_text', array(
-        'default' => __('Désolé, la page que vous cherchez n\'existe pas.', 'text_domain'),
+        'default' => __('', 'text_domain'),
         'transport' => 'refresh',
     ));
 
@@ -116,6 +116,17 @@ function my_customizer_settings($wp_customize) {
         'settings' => 'custom_error_text',
         'type' => 'text',
     ));
+    $wp_customize->add_setting('custom_paragraph_text', array(
+      'default' => __('', 'text_domain'),
+      'transport' => 'refresh',
+  ));
+
+  $wp_customize->add_control('custom_paragraph_text_control', array(
+      'label' => __('Texte du paragraphe', 'text_domain'),
+      'section' => '404_page_section',
+      'settings' => 'custom_paragraph_text',
+      'type' => 'text',
+  ));
 }
 
 add_action('customize_register', 'my_customizer_settings');
