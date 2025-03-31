@@ -9,23 +9,33 @@
     <?php wp_head() ?>
 </head>
 <body>
-    <header>
-        <div class="entete">
-            <figure class="entete__logo">
+<header>
+    <div class="entete">
+        <figure class="entete__logo">
             <?php
             if (function_exists('the_custom_logo')) {
                 the_custom_logo();
             }
             ?>
-            </figure>
-            <div class="entete__navigation">
-                <?php wp_nav_menu(array(
-                    'menu' => 'header',
-                    'container' => 'nav',
-                    'container_class' => 'entete__menu'
-                )); ?>
+        </figure>
+        <div class="entete__navigation">
+            <!-- Checkbox pour le menu burger -->
+            <input type="checkbox" id="burgerToggle" class="burger-toggle">
+            <label for="burgerToggle" class="burger-menu">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </label>
 
-            </div> <!-- fin entete__navigation  -->
-            <?php get_search_form() ?>
-        </div>
-    </header>
+            <!-- Menu -->
+            <?php wp_nav_menu(array(
+                'menu' => 'header',
+                'container' => 'nav',
+                'container_class' => 'entete__menu',
+                'menu_class' => 'menu-list'
+            )); ?>
+        </div> <!-- fin entete__navigation -->
+        <?php get_search_form() ?>
+    </div>
+</header>
+

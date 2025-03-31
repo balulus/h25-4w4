@@ -86,7 +86,6 @@ function modifie_requete_principal( $query ) {
      add_action( 'pre_get_posts', 'modifie_requete_principal' );
 
 function my_customizer_settings($wp_customize) {
-    // Ajouter une section "Page 404"
     $wp_customize->add_section('404_page_section', array(
         'title' => __('Page 404', 'text_domain'),
         'priority' => 30,

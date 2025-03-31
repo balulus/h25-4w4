@@ -67,11 +67,7 @@ Les composants
   list-style-type: none;
   gap: 10px 0;
 }
-@media screen and (max-width: 800px) {
-  .menu {
-    flex-direction: column;
-  }
-}
+
 .menu-item a {
   text-decoration: none;
   padding: 4px;
@@ -127,7 +123,7 @@ Les composants
   height: 100%;
 }
 .carte__contenu {
- color: black;
+ color: rgb(0, 0, 0);
  height: 100%;
  display: grid;
  place-content: center;
@@ -182,7 +178,7 @@ header{
     position: absolute;
     top: 0;
     right: 0;
-    background-color: #fff;
+    background-color: #575757;
     padding: 20px;
     flex-direction: column;
     width: 100vw;
@@ -329,4 +325,78 @@ footer {
 .related-posts ul li a {
   color: #332c56;
   text-decoration: none;
+}
+/**************** Faire enfin le menu burger pour la version mobile *********************/
+/* Masquer le checkbox (il est seulement utilisé pour gérer l'état) */
+.burger-toggle {
+  display: none;
+}
+
+/* Styles pour le bouton burger */
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.burger-line {
+  width: 30px;
+  height: 4px;
+  background-color: #777777;
+  border-radius: 5px;
+}
+
+/* Par défaut, afficher le menu */
+.entete__menu {
+  display: flex;
+}
+
+.menu-list {
+  display: flex;
+  list-style: none;
+}
+
+.menu-list li {
+  margin: 0 15px;
+}
+
+/* Version mobile */
+@media (max-width: 800px) {
+  /* Cacher le menu par défaut */
+  .entete__menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background-color: #000000;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 999;
+  }
+
+  /* Afficher le bouton burger */
+  .burger-menu {
+      display: flex;
+  }
+
+  /* Lorsque le checkbox est coché, afficher le menu */
+  .burger-toggle:checked + .burger-menu + .entete__menu {
+      display: flex;
+  }
+
+  /* Styliser le menu lorsqu'il s'affiche */
+  .entete__menu .menu-list {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+  }
+
+  .entete__menu .menu-list li {
+      margin: 10px 0;
+  }
 }
