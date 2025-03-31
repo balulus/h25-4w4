@@ -76,7 +76,6 @@ add_action('wp_enqueue_scripts', 'theme_4w4_enqueue_styles');
  * @param WP_query  $query la requête principal de WP
  */
 
-
 function modifie_requete_principal( $query ) {
     if ( $query->is_home() && $query->is_main_query() && ! is_admin() ) {
       $query->set( 'category_name', 'populaire' );
@@ -86,5 +85,39 @@ function modifie_requete_principal( $query ) {
      }
      add_action( 'pre_get_posts', 'modifie_requete_principal' );
 
+function my_customizer_settings($wp_customize) {
+    // Ajouter une section "Page 404"
+    $wp_customize->add_section('404_page_section', array(
+        'title' => __('Page 404', 'text_domain'),
+        'priority' => 30,
+    ));
+
+    // Paramètre pour l'image d'arrière-plan
+    $wp_customize->add_setting('background_image_404', array(
+        'default' => '',
+        'transport' => 'refresh',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'background_image_404_control', array(
+        'label' => __('Image de fond pour la page 404', 'text_domain'),
+        'section' => '404_page_section',
+        'settings' => 'background_image_404',
+    )));
+
+    // Paramètre pour le texte d'erreur
+    $wp_customize->add_setting('custom_error_text', array(
+        'default' => __('Désolé, la page que vous cherchez n\'existe pas.', 'text_domain'),
+        'transport' => 'refresh',
+    ));
+
+    $wp_customize->add_control('custom_error_text_control', array(
+        'label' => __('Texte d\'erreur', 'text_domain'),
+        'section' => '404_page_section',
+        'settings' => 'custom_error_text',
+        'type' => 'text',
+    ));
+}
+
+add_action('customize_register', 'my_customizer_settings');
 
 ?>
