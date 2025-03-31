@@ -277,3 +277,47 @@ footer {
     width: 100%;
 }
 }
+/**************** Page 404 *****************/
+.error-404 {
+  text-align: center;
+  padding: 100px 0;
+  background-size: cover;
+  background-position: center;
+}
+.error-404 .container {
+  color: white;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.error-404 h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.error-404 .btn-return-home {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #6F60BD;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.related-posts {
+  margin-top: 50px;
+}
+
+.related-posts ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.related-posts ul li {
+  margin: 10px 0;
+}
+
+.related-posts ul li a {
+  color: #332c56;
+  text-decoration: none;
+}

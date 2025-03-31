@@ -16,11 +16,10 @@ $error_text = get_theme_mod('custom_error_text', 'Désolé, la page que vous che
     </div>
 
     <div class="related-posts">
-        <h2>Articles liés à 404</h2>
         <?php
         // Affiche les articles avec le tag '404'
         $args = array(
-            'tag' => '404',
+            'category_name' => '404', // Utilise le "slug" de la catégorie 404
             'posts_per_page' => 5,
         );
         $query = new WP_Query($args);
