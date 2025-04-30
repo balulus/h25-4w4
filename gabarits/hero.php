@@ -5,14 +5,30 @@
     }
      ?>
     <section class="hero">
-        <div class="hero__carrousel" style="background-image: url(<?php echo $hero_background[0] ?>)"></div>
+        <div class="hero__carrousel  hero__carrousel--active  " style="background-image: url(<?php echo $hero_background[0] ?>)"></div>
         <div class="hero__carrousel" style="background-image: url(<?php echo $hero_background[1] ?>)"></div>
         <div class="hero__carrousel" style="background-image: url(<?php echo $hero_background[2] ?>)"></div>
+        <div class="hero__radio">
+            <input  class="hero__radio__input" data-id_radio="0"   type="radio" name="carroussel"  checked="checked">
+            <input  class="hero__radio__input" data-id_radio="1" type="radio" name="carroussel">
+            <input  class="hero__radio__input" data-id_radio="2" type="radio" name="carroussel">
+        </div>
         <div class="hero__contenu global">
-            <h1 class="hero__titre"><?php bloginfo('name'); ?></h1>
-            <p class="hero__description">
-            <?php bloginfo('description'); ?>
-            </p>
+            <div class="hero__animation hero__animation--active">
+                <h1 class="hero__titre"><?php bloginfo('name'); ?></h1>
+                <p class="hero__description"><?php bloginfo('description'); ?></p>
+            </div>
+            <div class="hero__animation ">
+                <h1 class="hero__titre">Lorem ipsum dolor</h1>
+                <p class="hero__description">Consectetur adipisicing elit. Magni voluptatem quas nobis, inventore sit odio debitis </p>
+            </div>
+            <div class="hero__animation ">
+                <h1 class="hero__titre">aaaa aaaa aaaaa aaaaaa</h1>
+                <p class="hero__description">zzzzzzz zzzzzz zzzzzz zzzzzzz zzzzzz zzzzzzz  </p>
+            </div>
+
+   
+
             <p class="hero__courriel">
             <?php bloginfo('admin_email'); ?>
             </p>

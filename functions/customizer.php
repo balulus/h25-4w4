@@ -11,7 +11,7 @@ function theme_tp_customize_register($wp_customize) {
 ));
 ///////////////////////////////// ajout de la donnée
 $wp_customize->add_setting('hero_auteur', array(
-  'default' => __('Eddy Martin', 'theme_tp'),
+  'default' => __('Valerie Therrien', 'theme_tp'),
   'sanitize_callback' => 'sanitize_text_field'
 ));
 ///////////////////////////////// ajout du contrôle de la donnée
@@ -33,53 +33,6 @@ $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_b
   'section' => 'hero_section',
 )));
 }
-
-
-
-
-
-    $wp_customize->add_section('404_page_section', array(
-        'title' => __('Page 404', 'text_domain'),
-        'priority' => 30,
-    ));
-
-    // Paramètre pour l'image d'arrière-plan
-    $wp_customize->add_setting('background_image_404', array(
-        'default' => '',
-        'transport' => 'refresh',
-    ));
-
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'background_image_404_control', array(
-        'label' => __('Image de fond pour la page 404', 'text_domain'),
-        'section' => '404_page_section',
-        'settings' => 'background_image_404',
-    )));
-
-    // Les textes
-    $wp_customize->add_setting('custom_error_text', array(
-        'default' => __('', 'text_domain'),
-        'transport' => 'refresh',
-    ));
-
-    $wp_customize->add_control('custom_error_text_control', array(
-        'label' => __('Texte d\'erreur', 'text_domain'),
-        'section' => '404_page_section',
-        'settings' => 'custom_error_text',
-        'type' => 'text',
-    ));
-    $wp_customize->add_setting('custom_paragraph_text', array(
-      'default' => __('', 'text_domain'),
-      'transport' => 'refresh',
-  ));
-
-  $wp_customize->add_control('custom_paragraph_text_control', array(
-      'label' => __('Texte du paragraphe', 'text_domain'),
-      'section' => '404_page_section',
-      'settings' => 'custom_paragraph_text',
-      'type' => 'text',
-  ));
 }
 
-add_action('customize_register', 'my_customizer_settings');
-
-?>
+add_action('customize_register', 'theme_tp_customize_register');

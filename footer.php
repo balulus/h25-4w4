@@ -1,16 +1,17 @@
-<footer>
-    <div class="piedpage_global">
-  	 	<div class="piedpage__s1">
-  	 		<div class="footer-col">
-  	 			<h4>Liens sur le voyages</h4>
-  	 			<ul>
-                   <?php wp_nav_menu(array(
+<?php
+$footer_couleur = get_theme_mod('footer_couleur','#000000');
+genere_vague($footer_couleur);
+?>
+<footer style="background-color: <?= $footer_couleur ?>">
+    <div class="piedpage global">
+        <section class="piedpage__s1">
+            <div class="piedpage__s1__externe">
+                <?php wp_nav_menu(array(
                     "menu" => "externe",
                     "container" => "nav",
                 )); ?>
-  	 			</ul>
-  	 		</div>
-  	 		<div class="footer-col">
+            </div>
+			<div class="footer-col">
   	 			<h4>Adresse et recherche</h4>
   	 			<ul>
   	 				<li><a href="#">3800, Sherbrook est, Montréal, Québec, Canada, H1X 2A2</a></li>
@@ -26,7 +27,11 @@
   	 			</ul>
 
   	 		</div>
-  	 	</div>
-  	 </div>
+        </section>
+        <section class="piedpage__s2"></section>
+        <section class="piedpage__s3"></section>
+
+
+    </div>
 </footer>
 <?php wp_footer() ?>
