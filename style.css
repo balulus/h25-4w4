@@ -80,7 +80,7 @@ ul {
 .recherche__input {
   border: none;
   outline: none;
-  background-color: rgba(0, 0, 0, 0.01);
+  background-color: rgba(91, 91, 91, 0.638);
   flex: 1 0 auto;
   padding: 3px;
 }
@@ -617,4 +617,61 @@ footer {
     margin: 10px 0;
   }
   
+}
+/*Page de recherche*/
+/* Style global pour le main */
+.site__main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+}
+
+/* Section de recherche */
+.recherche__section {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Articles */
+.recherche__section article {
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Titre de l'article */
+.recherche__section h5 {
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+  color: hsl(0, 0%, 20%);
+}
+
+.recherche__section h5 a {
+  text-decoration: none;
+  color: #0073aa;
+  transition: color 0.3s ease;
+}
+
+.recherche__section h5 a:hover {
+  color: #005077;
+}
+
+/* Extrait */
+.recherche__section p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+}
+
+/* Aucun résultat */
+.recherche__section > p {
+  font-style: italic;
+  color: #999;
+  text-align: center;
+  padding: 20px 0;
 }
