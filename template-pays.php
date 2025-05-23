@@ -16,11 +16,18 @@ get_header(); ?>
   </p>
 </div>
 
+
+<div class="contenu-page galerie-custom">
+<?php
+    while ( have_posts() ) : the_post();
+        the_content();
+    endwhile;
+    ?>
+</div>
 <?php
 $haut_couleur = get_theme_mod('haut_couleur','#005077');
 haut_genere_vague($haut_couleur);
 ?>
-
 
 
 <!-- ////////////////////////////////////////////////  section rest-api -->

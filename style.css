@@ -792,4 +792,23 @@ h1{
   max-width: 800px;
   margin: 0 auto;
 }
+.galerie-custom .wp-block-gallery {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.galerie-custom .wp-block-gallery img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.galerie-custom .wp-block-image {
+  margin-bottom: 20px;
+}
+
+.galerie-custom .wp-block-gallery.has-nested-images.columns-3 figcaption {
+  font-size: 14px;
+}
 
