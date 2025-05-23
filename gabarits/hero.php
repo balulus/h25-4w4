@@ -19,12 +19,12 @@
                 <p class="hero__description"><?php bloginfo('description'); ?></p>
             </div>
             <div class="hero__animation ">
-                <h1 class="hero__titre">Lorem ipsum dolor</h1>
-                <p class="hero__description">Consectetur adipisicing elit. Magni voluptatem quas nobis, inventore sit odio debitis </p>
+                <h1 class="hero__titre"><?php bloginfo('name'); ?></h1>
+                <p class="hero__description">Satisfait ou remboursé!</p>
             </div>
             <div class="hero__animation ">
-                <h1 class="hero__titre">aaaa aaaa aaaaa aaaaaa</h1>
-                <p class="hero__description">zzzzzzz zzzzzz zzzzzz zzzzzzz zzzzzz zzzzzzz  </p>
+                <h1 class="hero__titre"><?php bloginfo('name'); ?></h1>
+                <p class="hero__description">Visite accueillant 20 personnes à la fois!</p>
             </div>
 
    

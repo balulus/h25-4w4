@@ -618,6 +618,84 @@ footer {
   }
   
 }
+/*Page de single-post*/
+h1{
+  text-indent: 5%;
+}
+.populaire {
+  background: #f9f9f9;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.populaire .global {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.populaire article {
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  padding: 25px 30px;
+  margin-bottom: 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.populaire article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.populaire h1 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: #222;
+  border-bottom: 3px solid #630098;
+  padding-bottom: 8px;
+  font-weight: 700;
+}
+
+.populaire img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.populaire > .global > article > div {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.populaire p {
+  margin-top: 20px;
+  font-weight: 600;
+  color: #4b33b5;
+  font-style: italic;
+}
+
+.populaire .category-links {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #999;
+}
+
+/* Pour que les catégories soient jolies */
+.populaire .category-links a {
+  color: #351f9a;
+  text-decoration: none;
+  margin-right: 10px;
+  transition: color 0.2s ease;
+}
+
+.populaire .category-links a:hover {
+  color: #5b41cd;
+  text-decoration: underline;
+}
+
 /*Page de recherche*/
 /* Style global pour le main */
 .site__main {

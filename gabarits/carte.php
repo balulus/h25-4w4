@@ -6,9 +6,11 @@
 <article class="carte carte--grande">
   <figure class="carte__image">
   <?php
-        if (has_post_thumbnail()) {
-        the_post_thumbnail('thumbnail'); }
-    ?>      
+if (has_post_thumbnail()) {
+    the_post_thumbnail('thumbnail');
+}
+?>
+     
 </figure>
   <div class="carte__contenu">
       
