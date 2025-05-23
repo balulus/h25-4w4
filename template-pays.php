@@ -9,16 +9,17 @@ get_header(); ?>
 
 
 
-<div class="intro">
-  <h1><?php the_title(); ?></h1>
-  <p>Plongez au cœur de l’aventure et laissez-vous emporter par l’appel du large ! Notre planète regorge de destinations incroyables, chacune promettant une expérience unique et mémorable. Que vous rêviez de plages idylliques baignées de soleil, de sommets majestueux invitant à la randonnée, de villes vibrantes d’histoire et de modernité, ou de rencontres culturelles authentiques, il y a un pays fait pour vous.</p>
+<div id="intro-section" class="intro container">
+  <h1 class="intro-title">Les plus beaux pays</h1>
+  <p class="intro-text">
+  Plongez au cœur de l’aventure et laissez-vous emporter par l’appel du large ! Notre planète regorge de destinations incroyables, chacune promettant une expérience unique et mémorable. Que vous rêviez de plages idylliques baignées de soleil, de sommets majestueux invitant à la randonnée, de villes vibrantes d’histoire et de modernité, ou de rencontres culturelles authentiques, il y a un pays fait pour vous.
+  </p>
 </div>
+
 <?php
 $haut_couleur = get_theme_mod('haut_couleur','#005077');
-genere_vague($haut_couleur);
+haut_genere_vague($haut_couleur);
 ?>
-
-
 
 
 
@@ -40,9 +41,8 @@ genere_vague($haut_couleur);
         ?>
     </ul>
 
-    <h2 class="destination__titre">Articles de la catégorie</h2>
+    <h2 class="destination__titre">Endroit touristique dans ce pays</h2>
     <div class="destination__list">
-        <!-- Articles chargés ici dynamiquement -->
     </div>
 </section>
 
