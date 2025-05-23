@@ -26,6 +26,7 @@ function categories_liste($parent_slug){
         }
     }
 }
+
 /**
  * Génere une ou plusieurs vague svg
  */

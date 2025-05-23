@@ -753,3 +753,21 @@ h1{
   text-align: center;
   padding: 20px 0;
 }
+/**/
+
+.accordion-button {
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.accordion-content {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-top: none;
+  background-color: #fafafa;
+}
